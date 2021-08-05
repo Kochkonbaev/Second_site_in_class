@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{goods_detail.title}}
+{% endblock %}
+
+{% block content %}
+
+    <font size=6>{{goods_detail.title}}</font>
+    <br>
+    <h3>{{goods_detail.text}}</h3>>
+    <br>
+      <img src={{goods_detail.img}} height="100" width="150">
+    <br>
+    <br>
+    <br>
+    <a class="btn btn-default" href="{% url 'goods_delete' pk=goods_detail.pk %}"><span class="glyphicon glyphicon-remove"></span> Удалить</a>
+    <a class="btn btn-default" href="{% url 'goods_edit' pk=goods_detail.pk %}"><span class="glyphicon glyphicon-pencil"></span> Редактировать</a>
+    <hr>
+
+{% endblock %}
